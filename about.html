@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Abdulrehman</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0F172A',
+                        primary: '#2563EB',
+                        accent: '#FACC15',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0F172A;
+            color: #F8FAFC;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="fixed w-full z-50 bg-background/95 backdrop-blur-sm border-b border-primary/10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">AR.</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-light hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-light hover:text-primary transition-colors">About</a>
+                    <a href="projects.html" class="text-light hover:text-primary transition-colors">Projects</a>
+                    <a href="services.html" class="text-light hover:text-primary transition-colors">Services</a>
+                    <a href="testimonials.html" class="text-light hover:text-primary transition-colors">Testimonials</a>
+                    <a href="contact.html" class="text-light hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-light" id="menuButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden" id="mobileMenu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="/" class="block px-3 py-2 text-light hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">About</a>
+                <a href="projects.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">Projects</a>
+                <a href="services.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">Services</a>
+                <a href="testimonials.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">Testimonials</a>
+                <a href="contact.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center" data-aos="fade-up">About Me</h2>
+            
+            <!-- Skills -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-semibold mb-6">Technical Skills</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="p-6 bg-primary/5 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-12 h-12 mb-4" alt="Flutter">
+                        <h4 class="font-medium">Flutter</h4>
+                    </div>
+                    <div class="p-6 bg-primary/5 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-12 h-12 mb-4" alt="Firebase">
+                        <h4 class="font-medium">Firebase</h4>
+                    </div>
+                    <div class="p-6 bg-primary/5 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-12 h-12 mb-4" alt="Django">
+                        <h4 class="font-medium">Django</h4>
+                    </div>
+                    <div class="p-6 bg-primary/5 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-12 h-12 mb-4" alt="Python">
+                        <h4 class="font-medium">Python</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-semibold mb-6">Experience</h3>
+                <div class="relative border-l border-primary/30 pl-8 ml-4">
+                    <div class="mb-12">
+                        <div class="absolute w-4 h-4 bg-primary rounded-full -left-2 border-4 border-background"></div>
+                        <h4 class="text-xl font-medium mb-2">Freelance Developer</h4>
+                        <p class="text-light/70 mb-2">2023 - Present</p>
+                        <p class="text-light/80">Developing custom mobile and web applications for clients worldwide. Specializing in Flutter applications and Django backends.</p>
+                    </div>
+                    <div class="mb-12">
+                        <div class="absolute w-4 h-4 bg-primary rounded-full -left-2 border-4 border-background"></div>
+                        <h4 class="text-xl font-medium mb-2">Junior Mobile Developer</h4>
+                        <p class="text-light/70 mb-2">2022 - 2023</p>
+                        <p class="text-light/80">Worked on various Flutter projects, implementing complex UI designs and integrating REST APIs.</p>
+                    </div>
+                    <div>
+                        <div class="absolute w-4 h-4 bg-primary rounded-full -left-2 border-4 border-background"></div>
+                        <h4 class="text-xl font-medium mb-2">Intern Developer</h4>
+                        <p class="text-light/70 mb-2">2021 - 2022</p>
+                        <p class="text-light/80">Started journey with web development using Django and learned mobile app development fundamentals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div data-aos="fade-up">
+                <h3 class="text-2xl font-semibold mb-6">Education</h3>
+                <div class="bg-primary/5 p-6 rounded-lg border border-primary/10">
+                    <h4 class="text-xl font-medium mb-2">Bachelor in Computer Science</h4>
+                    <p class="text-light/70">2019 - 2023</p>
+                    <p class="text-light/80 mt-2">Specialized in Mobile and Web Application Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

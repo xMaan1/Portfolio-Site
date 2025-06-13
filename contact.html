@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Abdulrehman</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0F172A',
+                        primary: '#2563EB',
+                        accent: '#FACC15',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0F172A;
+            color: #F8FAFC;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as other pages) -->
+    <nav class="fixed w-full z-50 bg-background/95 backdrop-blur-sm border-b border-primary/10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">AR.</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-light hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-light hover:text-primary transition-colors">About</a>
+                    <a href="projects.html" class="text-light hover:text-primary transition-colors">Projects</a>
+                    <a href="services.html" class="text-light hover:text-primary transition-colors">Services</a>
+                    <a href="testimonials.html" class="text-light hover:text-primary transition-colors">Testimonials</a>
+                    <a href="contact.html" class="text-light hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-light" id="menuButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden" id="mobileMenu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="/" class="block px-3 py-2 text-light hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">About</a>
+                <a href="projects.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">Projects</a>
+                <a href="services.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">Services</a>
+                <a href="testimonials.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">Testimonials</a>
+                <a href="contact.html" class="block px-3 py-2 text-light hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center" data-aos="fade-up">Get in Touch</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div data-aos="fade-right">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-light mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg bg-primary/5 border border-primary/10 text-light focus:border-primary focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-light mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg bg-primary/5 border border-primary/10 text-light focus:border-primary focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-light mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg bg-primary/5 border border-primary/10 text-light focus:border-primary focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-light mb-2">Message</label>
+                            <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-lg bg-primary/5 border border-primary/10 text-light focus:border-primary focus:outline-none" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full transition-all transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div data-aos="fade-left">
+                    <div class="bg-primary/5 p-8 rounded-lg border border-primary/10">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Email -->
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium mb-1">Email</h4>
+                                    <a href="mailto:abdulrehman@example.com" class="text-light/70 hover:text-primary transition-colors">abdulrehman@example.com</a>
+                                </div>
+                            </div>
+
+                            <!-- WhatsApp -->
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M2.004 22l1.352-4.968A9.954 9.954 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 01-5.03-1.355L2.004 22zM8.391 7.308c.134-.01.269-.01.403-.004.054.004.108.01.162.016.159.018.334.115.393.249.298.676.588 1.357.868 2.04.062.152.025.347-.093.537a4.38 4.38 0 01-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268.12.116.237.235.363.346.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11.062.026.126.049.191.066a.35.35 0 00.367-.13c.724-.877.79-.934.796-.934v.002a.482.482 0 01.378-.127c.06.004.121.015.177.04.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265.004.067.01.175-.013.373-.032.259-.11.57-.188.733a1.155 1.155 0 01-.21.302 2.378 2.378 0 01-.33.288 3.71 3.71 0 01-.125.09 5.024 5.024 0 01-.383.22 1.99 1.99 0 01-.833.23c-.185.01-.37.024-.556.014-.008 0-.568-.087-.568-.087a9.448 9.448 0 01-3.84-2.046c-.226-.199-.435-.413-.649-.626-.89-.885-1.562-1.84-1.97-2.742A3.47 3.47 0 016.9 9.62a2.729 2.729 0 01.564-1.68c.073-.094.142-.192.261-.305.127-.12.207-.184.294-.228a.961.961 0 01.371-.1z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium mb-1">WhatsApp</h4>
+                                    <a href="https://wa.me/1234567890" class="text-light/70 hover:text-primary transition-colors" target="_blank">Send Message</a>
+                                </div>
+                            </div>
+
+                            <!-- Social Links -->
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium mb-2">Social Links</h4>
+                                    <div class="flex space-x-4">
+                                        <a href="#" class="text-light/70 hover:text-primary transition-colors" target="_blank" title="GitHub">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="text-light/70 hover:text-primary transition-colors" target="_blank" title="Fiverr">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M23.004 15.588a.995.995 0 1 1 .002-1.99.995.995 0 0 1-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092v2.466h-1.61v-3.558h-.684c-.547 0-.84.41-.84 1.092v2.466h-1.61v-4.874h1.61v.74c.264-.574.626-.74 1.163-.74h1.972v.74c.264-.574.625-.74 1.162-.74h.527v1.316zm-6.786 1.501h-3.359c.088.546.43.858 1.006.858.43 0 .732-.175.83-.487l1.425.4c-.351.848-1.22 1.364-2.255 1.364-1.748 0-2.549-1.355-2.549-2.515 0-1.14.83-2.516 2.549-2.516 1.69 0 2.471 1.375 2.471 2.516 0 .136-.01.272-.118.38zm-1.425-.955c-.098-.536-.449-.828-.967-.828-.508 0-.869.282-.976.828h1.943zm-3.818-2.76v4.874h-1.61v-.74c-.225.487-.664.74-1.367.74-1.27 0-2.042-.955-2.042-2.515 0-1.67.889-2.516 2.052-2.516.675 0 1.104.302 1.356.79v-.633h1.61zm-1.493 2.358c0-.604-.41-1.062-.976-1.062-.567 0-.977.458-.977 1.062 0 .604.41 1.063.977 1.063.566 0 .976-.459.976-1.063zm-4.246 2.516h-1.61v-4.874h1.61v4.874zm0-5.797h-1.61v-1.513h1.61v1.513zm-3.428 5.797h-1.61v--.74c-.225.487-.664.74-1.367.74-1.27 0-2.042-.955-2.042-2.515 0-1.67.889-2.516 2.052-2.516.675 0 1.104.302 1.356.79v-.633h1.61v4.874zm-1.494-2.516c0-.604-.41-1.062-.976-1.062-.567 0-.976.458-.976 1.062 0 .604.41 1.063.976 1.063.567 0 .977-.459.977-1.063z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Working Hours -->
+                    <div class="mt-8 bg-primary/5 p-8 rounded-lg border border-primary/10">
+                        <h3 class="text-2xl font-semibold mb-4">Working Hours</h3>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center">
+                                <span class="text-light/70">Monday - Friday</span>
+                                <span class="text-light">9:00 AM - 6:00 PM</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-light/70">Saturday</span>
+                                <span class="text-light">10:00 AM - 4:00 PM</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-light/70">Sunday</span>
+                                <span class="text-primary">Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Form Submission Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically handle the form submission
+            // For now, we'll just show an alert
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
