@@ -5,12 +5,11 @@ AOS.init({
 });
 
 // Typing Animation
-const typed = new Typed('#typed', {
-    strings: [
-        'Full-Stack Developer',
+const typed = new Typed('#typed', {    strings: [
+        'Web Developer',
         'Mobile App Developer',
-        'UI/UX Designer',
-        'API Integration Expert'
+        'Laravel Developer',
+        'Flutter Developer'
     ],
     typeSpeed: 50,
     backSpeed: 50,
