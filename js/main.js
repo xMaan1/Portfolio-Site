@@ -9,7 +9,8 @@ const typed = new Typed('#typed', {    strings: [
         'Web Developer',
         'Mobile App Developer',
         'Laravel Developer',
-        'Flutter Developer'
+        'Flutter Developer',
+        'React Native Developer'
     ],
     typeSpeed: 50,
     backSpeed: 50,
